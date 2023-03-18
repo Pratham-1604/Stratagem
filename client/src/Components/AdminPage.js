@@ -21,7 +21,7 @@ export default function AdminPage() {
       const json = await response.json();
       userImgUrl = json.imgURL;
       console.log(json);
-      navigate("/webcam", {state: {url: userImgUrl}})
+      navigate("/webcam", {state: {url: userImgUrl, aadhaar: aadhaar}})
     } catch (err) {
       console.log({ error: err.message });
     }

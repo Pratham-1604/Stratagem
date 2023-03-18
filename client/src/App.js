@@ -16,6 +16,8 @@ function App() {
           <Route path="/" element={<Register />}></Route>
           <Route path="/admin" element={<AdminPage />}></Route>
           <Route path="/webcam" element={<FaceRecognition />}></Route>
+          <Route path="/success" element={<Success />}></Route>
+          <Route path="/unsuccess" element={<Unsuccess />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
