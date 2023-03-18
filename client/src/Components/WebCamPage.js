@@ -16,13 +16,15 @@ const FaceRecognition = () => {
 
   const navigate = useNavigate();
 
+  console.log("aad: " , location.state.aadhaar);
+
   useEffect(() => {
-    if(count === -1){
-      navigate('/unsuccess')
-    } else if(count === 5){
-      navigate('/success', {state: {aadhaar: location.state.aadhaar}})
+    if (count === -1) {
+      navigate("/unsuccess");
+    } else if (count === 2) {
+      navigate("/success", { state: { aadhaar: location.state.aadhaar } });
     }
-  }, [count])
+  }, [count]);
 
   useEffect(() => {
     const moduleLoader = async () => {
@@ -100,16 +102,14 @@ const FaceRecognition = () => {
           faceMatcher.findBestMatch(d.descriptor)
         );
 
-        console.log(results[0]._label)
+        console.log(results[0]._label);
 
-        if (results[0]._label === 'unknown') {
+        if (results[0]._label === "unknown") {
           setCount(-1);
-        }
-
-        else {
+        } else {
           setCount((prevCount) => prevCount + 1);
         }
-      }, 5000),
+      }, 2000),
     ];
 
     return () => unsubscribeIntervals.forEach((e) => clearInterval(e));

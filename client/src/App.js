@@ -5,8 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Register from "./Components/form/RegisterPage";
 import AdminPage from "./Components/AdminPage";
-import { FaceDetection } from "face-api.js";
 import FaceRecognition from "./Components/WebCamPage";
+import SuccessfulPage from "./Components/SuccessfulPage";
+import UnsuccessfulPage from "./Components/UnsuccessfulPage";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
           <Route path="/" element={<Register />}></Route>
           <Route path="/admin" element={<AdminPage />}></Route>
           <Route path="/webcam" element={<FaceRecognition />}></Route>
-          <Route path="/success" element={<Success />}></Route>
-          <Route path="/unsuccess" element={<Unsuccess />}></Route>
+          <Route path="/success" element={<SuccessfulPage />}></Route>
+          <Route path="/unsuccess" element={<UnsuccessfulPage  />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

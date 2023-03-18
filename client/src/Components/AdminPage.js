@@ -23,9 +23,9 @@ export default function AdminPage() {
       console.log(json);
       navigate("/webcam", {state: {url: userImgUrl, aadhaar: aadhaar}})
     } catch (err) {
+      alert("Aadhar does not exist");
       console.log({ error: err.message });
     }
-    aadhaar = "";
   };
 
   return (
