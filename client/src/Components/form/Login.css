@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    border: 2px solid rgb(49, 0, 49);
+    border-radius: 20px;
+    margin:5px 10px;
+    padding:5px 10px;
+    transition: 200ms ease 0ms;
+}
+button:hover {
+    background-color: rgb(49, 0, 49);
+    color: white;
+}
+
+.login-outer {
+    color: rgb(49, 0, 49);
+    font-size: 20px;
+    padding : 5vw;
+    margin:5% 20% ;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(69, 0, 69));
+}
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        display: none;
+}
+
+.login-outer div .st1 {
+    color: rgb(49, 0, 49);
+    outline: none;
+    background: none;
+    text-decoration: none;
+    font-weight: bolder;
+    border: none;
+    border: 2px solid rgb(49, 0, 49);
+    border-radius: 20px;
+    margin: 6px 10px;
+    padding: 3px 50px;
+}
